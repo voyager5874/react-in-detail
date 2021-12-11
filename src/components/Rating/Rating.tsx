@@ -19,7 +19,7 @@ export const Rating = (props: RatingPropsType) => {
 
         return(
             <div className={"starBox"}>
-                <Star callback={props.onClick} weight={0} given={props.value > 0}/>
+                <Star callback={props.onClick} weight={1} given={props.value > 0}/>
                 <Star callback={props.onClick} weight={2} given={props.value > 1}/>
                 <Star callback={props.onClick} weight={3} given={props.value > 2}/>
                 <Star callback={props.onClick} weight={4} given={props.value > 3}/>
