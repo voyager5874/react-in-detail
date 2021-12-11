@@ -1,18 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 type OnOffPropsType = {
     on: boolean
+    callback: (desirableSwitchState:boolean) => void
 }
 
 export const OnOff = (props: OnOffPropsType) => {
 
-    const[on, setOn]=useState<boolean>(true)
+    const onOffButtonClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+        debugger
+        if(e.currentTarget.id==="onButton"){
+            props.callback(true)
+        }
+        if(e.currentTarget.id==="offButton"){
+            props.callback(false)
+        }
+    }
 
-    return (
+     return (
         <div className={"onOffBox"}>
-            <button className={`${on ? "buttonOn" : ""} onOffButton`} onClick={()=>{setOn(true)}}>On</button>
-            <button className={`${!on ? "buttonOff" : ""} onOffButton`} onClick={()=>{setOn(false)}}>Off</button>
-            <span className={`${on ? "buttonOn" : "buttonOff"} onOffLamp`}></span>
+            <button id={"onButton"}
+                    className={`${props.on ? "buttonOn" : ""} onOffButton`}
+                    onClick={onOffButtonClickHandler}>On</button>
+            <button id={"offButton"}
+                    className={`${!props.on ? "buttonOff" : ""} onOffButton`}
+                    onClick={onOffButtonClickHandler}>Off</button>
+            <span className={`${props.on ? "buttonOn" : "buttonOff"} onOffLamp`}></span>
         </div>
     );
 };
