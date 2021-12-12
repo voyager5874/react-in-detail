@@ -1,0 +1,46 @@
+.diySelectWrapper {
+    border: 1px solid black;
+    min-width: 150px;
+}
+
+.collapsedSelectBox {
+    background-color: #95a1b6;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.arrowIcon {
+    /*border:1px solid black;*/
+    padding-top: 15px;
+    margin-left: 10px;
+}
+
+.diySelectItems {
+    position: relative;
+    top:-50px;
+    opacity: 0.98;
+    background-color: #95a1b6;
+    min-width:100px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px 10px #888888;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+    /*opacity: 0;*/
+}
+h3{
+    font-size: 14px;
+}
+
+.diySelectLine:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}

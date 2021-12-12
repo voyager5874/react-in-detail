@@ -1,12 +1,14 @@
 import React from "react";
 
-export const AccordionBody = () => {
+type AccordionBodyType = {
+    items:Array<string>
+}
+
+export const AccordionBody = (props: AccordionBodyType) => {
     return (
 
         <ul>
-            <li>first</li>
-            <li>second</li>
-            <li>third</li>
+            {props.items.map((item, index)=><li key={index}>{item}</li>)}
         </ul>
 
     );

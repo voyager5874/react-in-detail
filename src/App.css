@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content:center;
   border: 1px solid black;
-  min-height: 200px;
+  min-height: 300px;
 }
 
 
@@ -33,14 +33,16 @@
 }
 
 .onOffBox{
-  height: 60px;
+  height: 150px;
   border: 1px solid black;
   display: flex;
-  flex-direction: row;
-  max-width: 200px;
+  flex-direction: column;
+  width: 80px;
   justify-content:space-between;
   align-items:center;
   margin: 20px;
+  background-color: dimgray;
+  padding: 20px;
 }
 .onOffButton{
   width: 60px;
@@ -65,6 +67,7 @@
   border-radius: 50%;
   border: 2px solid black;
 
+
 }
 
 .clickableTitle{
@@ -76,4 +79,6 @@
   padding: 10px;
   margin: 10px;
 }
+
+
 

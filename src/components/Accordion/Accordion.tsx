@@ -5,6 +5,7 @@ import {AccordionTitle} from "./AccordionTitle";
 type AccordionPropsType = {
     name:string
     collapsed: boolean
+    items: Array<string>
     callback: () => void
 }
 
@@ -13,7 +14,7 @@ export const Accordion = (props: AccordionPropsType) => {
     return (
         <div className={"accordionWrapper"}>
             <AccordionTitle name={props.name} callback={props.callback}/>
-            {props.collapsed || <AccordionBody/>}
+            {props.collapsed || <AccordionBody items={props.items}/>}
 
         </div>
     )
